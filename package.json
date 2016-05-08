@@ -6,10 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "gh-pr-stats": "./bin/cli.js"
+  },
   "author": "",
   "license": "MPL-2.0",
   "dependencies": {
     "bluebird": "^3.3.4",
-    "github-api": "^0.11.2"
+    "commodore": "0.0.1",
+    "github-api": "1.0.0",
+    "mkdirp": "^0.5.1",
+    "think-stats": "0.0.21"
   }
 }
