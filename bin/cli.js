@@ -11,11 +11,11 @@ const stats = require('../lib/index');
 
 program
   .version('0.0.1')
-  .option('-w, --owner <repo owner>', 'Repository owner')
-  .demand('owner')
-  .option('-r, --repo <repo name>', 'Repository name')
-  .demand('repo')
-  .option('-f, --force', 'Force fresh fetch')
+  .option('-u, --user <repo owner username>', 'Repository owner username')
+  .demand('user')
+  .option('-n, --name <repo name>', 'Repository name')
+  .demand('name')
+  .option('-f, --force', 'Force fresh fetch from GitHub. Data is fetched from cache by default.')
   .option('-t, --token <token>', 'GitHub OAuth token. If not provided, read from GITHUB_PR_STATS_OAUTH_TOKEN environment variable')
   .parse(process.argv);
 
@@ -24,7 +24,7 @@ if (program.token) {
   OAuthToken = program.token;
 }
 
-stats(program.owner, program.repo, OAuthToken, {
+stats(program.user, program.name, OAuthToken, {
   forceFetch: program.force
 });
 
