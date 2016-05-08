@@ -1,6 +1,6 @@
 {
   "name": "gh-pr-stats",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "GitHub PR stats",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,11 @@
   "bin": {
     "gh-pr-stats": "./bin/cli.js"
   },
-  "author": "",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/shane-tomlinson/gh-pr-stats.git"
+  },
+  "author": "Shane Tomlinson <stomlinson@mozilla.com>",
   "license": "MPL-2.0",
   "dependencies": {
     "bluebird": "^3.3.4",
